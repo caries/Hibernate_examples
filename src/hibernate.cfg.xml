@@ -13,5 +13,9 @@
         <property name="format_sql">true</property>
 
         <mapping resource="Unit.hbm.xml"/>
+        <mapping resource="Person.hbm.xml"/>
+        <mapping resource="Employee.hbm.xml"/>
+        <mapping resource="Company.hbm.xml"/>
+        <mapping resource="Government.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

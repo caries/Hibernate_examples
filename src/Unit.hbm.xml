@@ -2,7 +2,6 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="com.hibernate.metadata.Unit" table="UNIT">
-        <meta attribute="class-description">Encapsulates a simple unit</meta>
         <id name="id" type="int" column="UNIT_ID">
             <meta attribute="scope-set">protected</meta>
             <generator class="native"/>

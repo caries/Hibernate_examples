@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.hibernate.metadata.office.Company" table="EMPLOYEE">
+        <id name="id" type="long" column="COMPANY_ID">
+            <meta attribute="scope-set">protected</meta>
+            <generator class="native"/>
+        </id>
+        <property name="name" type="string"/>
+        <set name="employees" inverse="true" cascade="all">
+            <key column="COMPANY_ID"/>
+            <one-to-many class="com.hibernate.metadata.office.Employee"/>
+        </set>
+        <many-to-one name="government" class="com.hibernate.metadata.office.Government" column="GOVERNMENT_ID" cascade="all"/>
+    </class>
+</hibernate-mapping>

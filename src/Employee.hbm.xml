@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <joined-subclass name="com.hibernate.metadata.office.Employee" extends="com.hibernate.metadata.office.Person" table="EMPLOYEE">
+        <key column="PERSON_ID"/>
+        <many-to-one name="company" class="com.hibernate.metadata.office.Company" column="COMPANY_ID"/>
+        <many-to-one name="secretSantaVictim" class="com.hibernate.metadata.office.Employee" cascade="all"/>
+    </joined-subclass>
+</hibernate-mapping>
